@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dylan Kossoy – Frontend Developer</title>
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #1e40af;
+  }
+
+  header {
+    background: #2563eb;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgb(37 99 235 / 0.3);
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  header p {
+    font-weight: 500;
+    font-size: 1.2rem;
+    opacity: 0.85;
+  }
+
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project-card:hover, .project-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgb(37 99 235 / 0.25);
+  }
+
+  .project-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  .project-media img,
+  .project-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .project-content h2 {
+    font-size: 1.6rem;
+    color: #2563eb;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-content p.description {
+    flex-grow: 1;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+
+  .project-content p.techstack {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+
+  .project-content a.github-link {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    background: #2563eb;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgb(37 99 235 / 0.3);
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  .project-content a.github-link:hover,
+  .project-content a.github-link:focus {
+    background: #1e40af;
+  }
+
+  footer {
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+    margin-top: auto;
+  }
+  footer a {
+    color: #a5b4fc;
+  }
+  footer a:hover {
+    color: white;
+  }
+
+  /* Responsive typography */
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Dylan Kossoy</h1>
+  <p>Junior Computer Science Student — Frontend Developer specializing in Vue.js & Interactive Web Apps</p>
+</header>
+
+<main>
+  <div class="projects">
+
+    <article class="project-card" tabindex="0">
+      <div class="project-media">
+        <img src="assets/img/ProjectNBA.png" alt="NBA Basketball Project Screenshot" />
+      </div>
+      <div class="project-content">
+        <h2>NBA Basketball Project</h2>
+        <p class="description">A Vue.js NBA betting app with user authentication, player stats, and interactive features like favorites and predictions. I handled frontend logic, state management, and user experience.</p>
+        <p class="techstack"><strong>Tech Stack:</strong> Vue.js, JavaScript, REST APIs, CSS</p>
+        <a href="https://github.com/DylanKossoy/NBA_APP.git" target="_blank" rel="noopener" class="github-link">View on GitHub</a>
+      </div>
+    </article>
+
+    <article class="project-card" tabindex="0">
+      <div class="project-media">
+        <img src="assets/img/ProjectSpace.png" alt="Space Messaging App Screenshot" />
+      </div>
+      <div class="project-content">
+        <h2>Space Messaging App</h2>
+        <p class="description">A Vue.js space-themed messaging platform with user login, chat, and search capabilities. Backend database was provided, I implemented frontend data flow and UI components.</p>
+        <p class="techstack"><strong>Tech Stack:</strong> Vue.js, Node.js, JavaScript, CSS</p>
+        <a href="https://github.com/DylanKossoy/SpaceMessagingApp.git" target="_blank" rel="noopener" class="github-link">View on GitHub</a>
+      </div>
+    </article>
+
+    <article class="project-card" tabindex="0">
+      <div class="project-media">
+        <video src="./assets/videos/fui.mp4" controls poster="assets/img/fui.png" alt="Fiction UI Demo"></video>
+      </div>
+      <div class="project-content">
+        <h2>Fiction UI</h2>
+        <p class="description">A collection of futuristic UI designs inspired by sci-fi films, demonstrating strong layout, animation, and visual styling skills.</p>
+        <p class="techstack"><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+        <a href="https://github.com/DylanKossoy" target="_blank" rel="noopener" class="github-link">View on GitHub</a>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <p>Contact me: <a href="mailto:your.email@example.com">dylanakossoy@gmail.com</a> | <a href="https://github.com/DylanKossoy" target="_blank" rel="noopener">GitHub</a> | <a href="./assets/img/DKossoyResume.pdf" target="_blank" class="resume-button">View My Resume</a>
+</p>
+</footer>
+
+</body>
+</html>
